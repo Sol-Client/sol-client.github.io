@@ -28,23 +28,46 @@ body {
 	color: white;
 	text-decoration: none;
 	font-family: Roboto;
-	font-size: 1.5em;
 	padding: 30px;
+	font-size: 2em;
+	padding-left: 40px;
+	padding-right: 40px;
 	transition: background 0.3s, box-shadow 0.3s;
+	border-radius: 5px;
 }
 
 .button.green {
 	background: rgb(0, 100, 0);
-	border-radius: 5px;
 	box-shadow: 0 0 20px rgb(0, 100, 0);
-	font-size: 2em;
-	padding-left: 40px;
-	padding-right: 40px;
 }
 
 .button.green:hover {
-	box-shadow: 0 0 50px rgb(0, 100, 0);
 	background: rgb(20, 120, 20);
+}
+
+.button.discord, .button.github {
+	padding: 20px;
+	font-size: 1.5em;
+	display: inline-block;
+}
+
+.button.discord {
+	background: rgb(88, 101, 242);
+	box-shadow: 0 0 20px rgb(88, 101, 242);
+}
+
+.button.discord:hover {
+	background: rgb(118, 131, 272);
+}
+
+.button.github {
+	background: rgb(70, 70, 70);
+	box-shadow: 0 0 20px rgb(90, 90, 90);
+	margin-right: 40px;
+}
+
+.button.github:hover {
+	background: rgb(90, 90, 90);
 }
 
 .centred-text, .feature-description {
