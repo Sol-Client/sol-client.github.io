@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="hud.svg"
+   sodipodi:docname="sword.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,15 +24,16 @@
      inkscape:document-units="mm"
      showgrid="false"
      units="px"
-     inkscape:zoom="16"
-     inkscape:cx="28.5625"
-     inkscape:cy="23.15625"
+     inkscape:zoom="4"
+     inkscape:cx="16.75"
+     inkscape:cy="-51.875"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="true" />
   <defs
      id="defs2" />
   <g
@@ -40,12 +41,15 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       id="rect1960-3"
-       style="fill:#ffffff;stroke:none;stroke-width:0.18832;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 2.3434524,3.2316964 1.9654762,3.4679316 1.5875,3.7041667 1.9654762,3.9404018 2.3434524,4.1766369 V 3.9876488 H 6.1232142 V 4.1766369 L 6.5011904,3.9404018 6.8791667,3.7041667 6.5011904,3.4679316 6.1232142,3.2316964 V 3.4206845 H 2.3434524 Z" />
-    <path
-       id="rect1960-3-5"
-       style="fill:#ffffff;stroke:none;stroke-width:0.18832;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 4.7058036,1.8142858 4.4695684,1.4363095 4.2333333,1.0583333 3.9970983,1.4363095 3.7608631,1.8142858 H 3.9498512 V 5.5940477 H 3.7608631 L 3.9970983,5.9720238 4.2333333,6.35 4.4695684,5.9720238 4.7058036,5.5940477 H 4.5168154 V 1.8142858 Z" />
+       id="rect928"
+       style="fill:#ffffff;stroke:none;stroke-width:0.649749"
+       d="M 2.1530908,1.5875001 2.1348787,1.8839933 2.1166666,2.1804866 3.6863319,5.0350198 3.3659794,5.2664524 3.2526115,6.0591444 v 0 L 4.0682335,5.5647248 4.5000447,6.3500001 4.9078558,6.1027903 4.4760446,5.3175149 5.2916666,4.8230953 v 0 L 4.5225823,4.5339016 4.23008,4.7054067 2.6604146,1.8508735 2.4067527,1.7191868 Z"
+       sodipodi:nodetypes="cccccccccccccccccc" />
+    <circle
+       style="fill:#ffffff;stroke:none;stroke-width:1.12319"
+       id="path8594"
+       cx="4.8143349"
+       cy="6.4378142"
+       r="0.361415" />
   </g>
 </svg>

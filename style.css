@@ -10,6 +10,10 @@ body {
 	font-weight: normal;
 }
 
+p {
+	font-family: Roboto;
+}
+
 .title {
 	font-size: 5em;
 }
