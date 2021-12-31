@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666666 8.4666666"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="hud.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="16"
+     inkscape:cx="28.5625"
+     inkscape:cy="23.15625"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1960-3"
+       style="fill:#ffffff;stroke:none;stroke-width:0.225984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1.9654762,3.1372023 1.5119048,3.4206845 1.0583333,3.7041666 1.5119048,3.9876488 1.9654762,4.2711309 V 4.0443452 H 6.5011904 V 4.2711309 L 6.9547618,3.9876488 7.4083333,3.7041666 6.9547618,3.4206845 6.5011904,3.1372023 V 3.363988 H 1.9654762 Z" />
+    <path
+       id="rect1960-3-5"
+       style="fill:#ffffff;stroke:none;stroke-width:0.225984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 4.8002976,1.4363096 4.5168154,0.98273813 4.2333332,0.52916663 3.9498512,0.98273813 3.666369,1.4363096 H 3.8931547 V 5.9720238 H 3.666369 L 3.9498512,6.4255952 4.2333332,6.8791666 4.5168154,6.4255952 4.8002976,5.9720238 H 4.5735118 V 1.4363096 Z" />
+  </g>
+</svg>

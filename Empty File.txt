@@ -1,0 +1,66 @@
+body {
+	background-color: rgb(30, 30, 30);
+	color: white;
+	margin: none;
+	margin-top: 50px;
+}
+
+.title, .subtitle, .subheading {
+	font-family: Raleway;
+	font-weight: normal;
+}
+
+.title {
+	font-size: 5em;
+}
+
+.subheading {
+	font-size: 2.5em;
+}
+
+.title, .subtitle, .logo, .centred, .subheading {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+
+.button {
+	color: white;
+	text-decoration: none;
+	font-family: Roboto;
+	font-size: 1.5em;
+	padding: 30px;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+
+.button.green {
+	background: rgb(0, 100, 0);
+	border-radius: 5px;
+	box-shadow: 0 0 20px rgb(0, 100, 0);
+	font-size: 2em;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.button.green:hover {
+	box-shadow: 0 0 50px rgb(0, 100, 0);
+	background: rgb(20, 120, 20);
+}
+
+.centred-text, .feature-description {
+	width: 100%;
+	text-align: center;
+}
+
+.awesome-feature {
+	display: inline-block;
+}
+
+.awesome-feature:not(:last-child) {
+	margin-right: 40px;
+}
+
+.feature-description {
+	font-family: Roboto;
+	margin-top: -20px;
+}
