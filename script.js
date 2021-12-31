@@ -21,9 +21,6 @@ function getOSExtension() {
 	else if(/Android/.test(userAgent)) {
 		return null;
 	}
-	else if(!os && /Linux/.test(platform)) {
-		return "linux";
-	}
 	else if(/Linux/.test(platform)) {
 		return ".deb";
 	}
