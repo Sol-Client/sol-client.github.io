@@ -7,12 +7,22 @@ function getOSExtension() {
 	var platform = window.navigator.platform;
 	var macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
 	var windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+	var iosPlatforms = ["iPhone", "iPad", "iPod"];
 
 	if(macosPlatforms.indexOf(platform) !== -1) {
 		return ".dmg";
 	}
 	else if(windowsPlatforms.indexOf(platform) !== -1) {
 		return ".exe";
+	}
+	else if(iosPlatforms.indexOf(platform) !== -1) {
+		return null;
+	}
+	else if(/Android/.test(userAgent)) {
+		return null;
+	}
+	else if(!os && /Linux/.test(platform)) {
+		return "linux";
 	}
 	else if(/Linux/.test(platform)) {
 		return ".deb";
