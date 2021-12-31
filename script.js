@@ -32,6 +32,13 @@ if(os) {
 	var request = new XMLHttpRequest();
 	request.addEventListener("load", (event) => {
 		var response = JSON.parse(request.responseText);
+
+		// If the rate limit is exceeded, fall back to the less user friendly page
+		if(!response.assets) {
+			downloadButton.innerText = "Download";
+			return;
+		}
+		
 		for(var asset of response.assets) {
 			if(asset.name.endsWith(os)) {
 				downloadButton.href = asset.browser_download_url;
