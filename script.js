@@ -32,8 +32,6 @@ function getOSExtension() {
 
 var os = getOSExtension();
 
-console.log(os);
-
 if(os) {
 	var request = new XMLHttpRequest();
 	request.addEventListener("load", (event) => {
