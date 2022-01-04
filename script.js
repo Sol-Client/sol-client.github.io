@@ -22,11 +22,17 @@ function getOSExtension() {
 		return null;
 	}
 	else if(/Linux/.test(platform)) {
-		return ".deb";
+		if(/Ubuntu/.test(userAgent) || /Debian/.test(userAgent)) {
+			return ".deb";
+		}
+	
+		return ".AppImage";
 	}
 }
 
 var os = getOSExtension();
+
+console.log(os);
 
 if(os) {
 	var request = new XMLHttpRequest();
@@ -35,14 +41,12 @@ if(os) {
 
 		// If the rate limit is exceeded, fall back to the less user friendly page
 		if(!response.assets) {
-			downloadButton.innerText = "Download";
 			return;
 		}
 		
 		for(var asset of response.assets) {
 			if(asset.name.endsWith(os)) {
 				downloadButton.href = asset.browser_download_url;
-				downloadButton.innerText = "Download";
 				return;
 			}
 		}
