@@ -109,6 +109,7 @@ p {
 	background-color: rgba(0, 0, 0, 150);
 	margin-bottom: 15px;
 	cursor: default;
+	transition: all 300ms;
 }
 
 .mod:hover {
