@@ -1,137 +1,122 @@
-:root {
-	--accent-colour: rgb(255, 180, 0);
-}
-
-body {
-	background-color: rgb(30, 30, 30);
-	color: white;
+*{
+	padding: 0;
 	margin: 0;
-	margin-top: 50px;
+}
+:root{
+	--primary: rgb(30, 30, 30);
+	--accent: rgb(255, 180, 0);
+	scroll-behavior: smooth;
+}
+.container{
+	width: 100%;
+	height: fit-content;
+	background-color: var(--primary);
 }
 
-.title, .subtitle, .subheading {
-	font-family: Raleway;
-	font-weight: normal;
-}
-
-p {
-	font-family: Roboto;
-}
-
-.title {
-	font-size: 5em;
-}
-
-.subheading {
-	font-size: 2.5em;
-}
-
-.title, .subtitle, .logo, .centred, .subheading {
-	margin-left: auto;
-	margin-right: auto;
-	display: table;
-}
-
-.button {
+/*Global*/
+h1{
 	color: white;
+	font-size: 75px;
+	font-weight: 200;
+	font-family: Raleway;
+}
+h2{
+	color: white;
+	font-size: 35px;
+	font-weight: 200;
+	font-family: Arial;
+}
+p{
+	color: white;
+	font-family: Arial;
+}
+
+/*Home Section*/
+.home{
+	min-height: fit-content;
+	height: 70vh;
+	text-align: center;
+}
+.home .socials{
+	float: left;
+	margin-top: 15px;
+	position: absolute;
+}
+.socials li{
+	display: inline;
+	padding-left: 15px;
+}
+.logo{
+	margin-top: 5%;
+}
+.home p{
+	color: white;
+	font-size: 25px;
+}
+.downloadButton{
 	text-decoration: none;
-	font-family: Roboto;
-	padding: 30px;
-	font-size: 2em;
-	padding-left: 40px;
-	padding-right: 40px;
-	transition: background 0.3s, box-shadow 0.3s;
+	text-align: center;
+	color: var(--primary);
+	padding: 20px;
+	background-color: var(--accent);
+	width: 15%;
+	font-size: 35px;
+	border-radius: 45px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	font-family: Arial;
+}
+
+.downloadButton:hover, .downloadButton:focus{
+	background-color: rgb(255, 195, 55);
+	box-shadow: 0 0 20px rgb(255, 195, 55);
+}
+
+/*Features Section*/
+.features{
+	height: 200vh;
+}
+.feature2, .feature1{
+	padding-top: 40vh;
+}
+.features h2{
+	margin-top: 25%;
+	font-size: 5vh;
+}
+.feature1, .feature2{
+	margin: 5vh;
+}
+.feature1 .text{
+ 	float: left;
+	width: 35%;
+}
+.feature2 .text{
+	float: right;
+	width: 35%;
+}
+.features img{
+	transition: box-shadow 0.3s;
 	border-radius: 5px;
 }
+.features img:hover, .features img:focus{
+	box-shadow: 0 0 20px black;
+}
+.feature1 img{
+	width: 60%;
+	float: right;
+}
+.feature2 img{
+	width: 60%;
+	float: left;
+}
 
-.button.green {
-	background: rgb(0, 100, 0);
-	box-shadow: 0 0 20px rgb(0, 100, 0);
-	width: 185px;
+/*Footer Section*/
+.footer{
+	height: fit-content;
+	background-color: rgb(15, 15, 15);
 	text-align: center;
 }
 
-.button.green:hover {
-	background: rgb(20, 120, 20);
-}
-
-.button.discord, .button.github {
-	padding: 20px;
-	font-size: 1.5em;
-	display: inline-block;
-}
-
-.button.discord {
-	background: rgb(88, 101, 242);
-	box-shadow: 0 0 20px rgb(88, 101, 242);
-}
-
-.button.discord:hover {
-	background: rgb(118, 131, 272);
-}
-
-.button.github {
-	background: rgb(70, 70, 70);
-	box-shadow: 0 0 20px rgb(90, 90, 90);
-	margin-right: 40px;
-}
-
-.button.github:hover {
-	background: rgb(90, 90, 90);
-}
-
-.centred-text, .feature-description {
-	width: 100%;
-	text-align: center;
-}
-
-.feature {
-	display: inline-block;
-}
-
-.feature:not(:last-child) {
-	margin-right: 40px;
-}
-
-.feature-description {
-	font-family: Roboto;
-	margin-top: -20px;
-}
-
-.mod {
-	border: solid 3px var(--accent-colour);
-	width: 894px;
-	height: 84px;
+.footer h2{
+	bottom: 0;
 	position: relative;
-	left: calc(50% - 450px);
-	font-family: Roboto;
-	font-size: 24px;
-	background-color: rgba(0, 0, 0, 150);
-	margin-bottom: 15px;
-	cursor: default;
-}
-
-.mod:hover {
-	border-color: rgb(255, 240, 60);
-}
-
-.mod-title {
-	position: absolute;
-	left: 15px;
-	top: 9px;
-}
-
-.mod-description {
-	position: absolute;
-	left: 15px;
-	top: 45px;
-	color: rgb(128, 128, 128);
-}
-
-.mod-category {
-	font-size: 24px;
-	font-family: Roboto;
-	text-align: center;
-	margin-bottom: 16px;
-	cursor: default;
 }
