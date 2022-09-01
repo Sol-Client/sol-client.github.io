@@ -1,82 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/>
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
-		<link rel="manifest" href="/favicons/site.webmanifest"/>
-		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#db7c00"/>
-		<link rel="shortcut icon" href="/favicons/favicon.ico"/>
-		<meta name="msapplication-TileColor" content="#1e1e1e"/>
-		<meta name="msapplication-config" content="/favicons/browserconfig.xml"/>
-		<meta name="theme-color" content="#ffffff"/>
-		<meta name="description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
-		<meta name="keywords" content="Minecraft, Minecraft Client, PVP, Minecraft PVP, PVP Client, Minecraft Mod, Replay Mod, Hypixel">
-		<meta property="og:title" content="Sol Client"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="https://sol-client.github.io/"/>
-		<meta property="og:image" content="https://sol-client.github.io/favicons/thumbnail.jpg"/>
-		<meta property="og:site_name" content="Sol Client"/>
-		<meta property="og:locale" content="en-gb"/>
-		<meta property="og:description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
-		<meta name="twitter:card" content="summary_large_image"/>
-		<meta property="twitter:domain" content="sol-client.github.io"/>
-		<meta property="twitter:url" content="https://sol-client.github.io/"/>
-		<meta name="twitter:title" content="Sol Client"/>
-		<meta name="twitter:description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
-		<meta name="twitter:image" content="https://sol-client.github.io/favicons/thumbnail.jpg"/>
-		<title>Sol Client - Open Source Minecraft Client</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com"/>
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet"/>
-		<link href="style.css" rel="stylesheet"/>
-		<script src="script.js" defer></script>
-	</head>
-	<body>
-		<img src="logo.png" class="logo"/>
-		<h1 class="title">Sol Client</h1>
-		<h1 class="subtitle">Simple yet feature-rich Minecraft Client</h1>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<a class="button centred green" id="download-button" href="https://github.com/Sol-Client/Client/releases">Download</a>
-		<br/>
-		<br/>
-		<br/>
-		<div class="centred">
-			<a class="button github" href="https://github.com/Sol-Client/Client">GitHub</a>
-			<a class="button discord" href="https://discord.gg/QFDGDhcFqu">Discord</a>
-		</div>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<h1 class="subheading">Features</h1>
-		<div class="centred">
-			<div class="feature">
-				<img src="hud.svg" height="150px"/>
-				<p class="feature-description">Custom HUD</p>
-			</div>
-			<div class="feature">
-				<img src="replay.svg" height="150px"/>
-				<p class="feature-description">Replay Mod *</p>
-			</div>
-			<div class="feature">
-				<img src="servers.svg" height="150px"/>
-				<p class="feature-description">Server Integration</p>
-			</div>
-			<div class="feature">
-				<img src="sword.svg" height="150px"/>
-				<p class="feature-description">1.8 Support</p>
-			</div>
-		</div>
-		<br/>
-		<br/>
-		<p class="centred">* Replay mod is modified from the Forge mod originally created by Johni and CrushedPixel.</p>
-		<br/>
-		<br/>
-	</body>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="/favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#db7c00"/>
+    <link rel="shortcut icon" href="/favicons/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#1e1e1e"/>
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
+    <meta name="keywords" content="Minecraft, Minecraft Client, PVP, Minecraft PVP, PVP Client, Minecraft Mod, Replay Mod, Hypixel">
+    <meta property="og:title" content="Sol Client"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://sol-client.github.io/"/>
+    <meta property="og:image" content="https://sol-client.github.io/favicons/thumbnail.jpg"/>
+    <meta property="og:site_name" content="Sol Client"/>
+    <meta property="og:locale" content="en-gb"/>
+    <meta property="og:description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:domain" content="sol-client.github.io"/>
+    <meta property="twitter:url" content="https://sol-client.github.io/"/>
+    <meta name="twitter:title" content="Sol Client"/>
+    <meta name="twitter:description" content="Sol Client is an open source Minecraft Client with many useful features including Replay Mod."/>
+    <meta name="twitter:image" content="https://sol-client.github.io/favicons/thumbnail.jpg"/>
+    <title>Sol Client - Open Source Minecraft Client</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <!-- <script src="script.js" defer></script> -->
+    <title>Sol Client - Open Source Minecraft Client</title>
+</head>
+<body>
+    <div class="logobg"></div>
+    <br>
+    <h1 class="linear-wipe">Sol Client</h1>
+    <br><br><br><br><br>
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature">
+            <img src="https://github.com/Sol-Client/sol-client.github.io/raw/main/hud.svg" alt="HUD Icon" height="150px">
+            <p class="feature-desc">Customizable HUD</p>
+        </div>
+        <div class="feature">
+            <img src="https://github.com/Sol-Client/sol-client.github.io/raw/main/sword.svg" alt="Sword Icon" height="150px">
+            <p class="feature-desc">1.8 Support</p>
+        </div>
+        <div class="feature">
+            <img src="https://github.com/Sol-Client/sol-client.github.io/raw/main/replay.svg" alt="Replay Icon" height="150px">
+            <p class="feature-desc">Replay Mod *</p>
+        </div>
+        <div class="feature">
+            <img src="https://github.com/Sol-Client/sol-client.github.io/raw/main/servers.svg" alt="Sword Icon" height="150px">
+            <p class="feature-desc">Server Integration</p>
+        </div>
+    </div>
+    <h4 class="note" style="background-color: rgb(255, 175, 2); color: black;">* Replay mod is modified from the Forge mod originally created by Johni and CrushedPixel.</h4>
+</body>
 </html>
