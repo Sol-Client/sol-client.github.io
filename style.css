@@ -11,25 +11,28 @@ h1 {
 h2 {
     font-size: 350%;
 }
-@keyframes animation {
+@keyframes wheretfami {
     from {
-        transform: rotateX(15deg) rotateY(20deg);
+        transform: rotateX(10deg) rotateY(15deg);
     }
     15% {
-        transform: rotateX(25deg) rotateY(15deg);
+        transform: rotateX(20deg) rotateY(10deg);
     }
     35% {
-        transform: rotateX(-15deg) rotateY(-10deg);
+        transform: rotateX(-10deg) rotateY(-5deg);
     }
     45% {
-        transform: rotateX(-25deg) rotateY(-15deg);
+        transform: rotateX(-20deg) rotateY(10deg);
+    }
+    55% {
+        transform: rotateX(10deg) rotateY(-5deg);
     }
     to {
-        transform: rotateX(15deg) rotateY(20deg);
+        transform: rotateX(10deg) rotateY(15deg);
     }
 }
 .logobg {
-    animation: animation 5s infinite;
+    animation: wheretfami 7s infinite;
     margin: 0 auto;
     width: 250px;
     height: 250px;
@@ -89,12 +92,10 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    border: white 2px solid;
 }
 @media (max-width: 800px) {
     .features {
         flex-direction: column;
     }
-}
-mark {
-    background-color: rgb(255, 175, 2);
 }
