@@ -88,7 +88,6 @@ h2 {
 }
 .features {
     display: flex;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -98,4 +97,12 @@ h2 {
     .features {
         flex-direction: column;
     }
+}
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 22.5px;
+    border-radius: 5px;
+    margin: 25px;
 }
