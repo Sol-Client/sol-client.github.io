@@ -1,13 +1,12 @@
-var downloadButton = document.getElementById("download-button");
-
+const downloadButton = document.getElementById("download-button");
 
 // https://stackoverflow.com/a/38241481/7658797
 function getOSExtension() {
-	var userAgent = window.navigator.userAgent;
-	var platform = window.navigator.platform;
-	var macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
-	var windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-	var iosPlatforms = ["iPhone", "iPad", "iPod"];
+	const userAgent = window.navigator.userAgent;
+	const platform = window.navigator.platform;
+	const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
+	const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+	const iosPlatforms = ["iPhone", "iPad", "iPod"];
 
 	if(macosPlatforms.indexOf(platform) !== -1) {
 		return ".dmg";
@@ -55,3 +54,26 @@ if(os) {
 else {
 	downloadButton.innerText = "Unsupported";
 }
+
+if(window.matchMedia("(hover: hover)").matches) {
+	const logo = document.querySelector(".logobg");
+	const rotationMultiplier = 0.2;
+
+	logo.style.animation = "initial";
+	logo.style.transform = "initial";
+	
+	logo.addEventListener("mousemove", (event) => {
+		const bounds = logo.getBoundingClientRect();
+		const rotationX = -(event.clientY - bounds.y - bounds.height / 2) * rotationMultiplier;
+		const rotationY = (event.clientX - bounds.x - (bounds.width / 2)) * rotationMultiplier;
+		window.requestAnimationFrame(() => {
+			logo.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+			logo.style.transition = "transform 0.1s";
+		});
+	});
+
+	logo.addEventListener("mouseleave", (event) => {
+		logo.style.transform = "initial";
+		logo.style.transition = "transform 0.4s";
+	});
+};
