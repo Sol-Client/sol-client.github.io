@@ -36,10 +36,12 @@ h2 {
     margin: 0 auto;
     width: 250px;
     height: 250px;
-    background-color: #ffaa11;
     transform-style: preserve-3d;
     transform: rotateX(15deg) rotateY(20deg);
+    background-color: #ffaa11;
+    transition:  transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 .logobg::before {
     content: "";
     position: absolute;
@@ -78,13 +80,13 @@ h2 {
     }
 }
 ::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, #2b1c05 0%, #333 50%, #2b1c05 100%);
+    background: nones;
 }
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, rgb(255, 178, 35), rgb(194, 126, 0));
+    background: rgb(200, 200, 200);
 }
 .features {
     display: flex;
