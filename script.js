@@ -55,3 +55,35 @@ if(os) {
 else {
 	downloadButton.innerText = "Unsupported";
 }
+
+let movingArea = document.getElementById("header");
+let logo = document.getElementById("logo");
+
+if (!os) {
+	logo.style.animation = "wheretfami 7s infinite";
+}
+
+function transforms(x, y, el) {
+	let box = el.getBoundingClientRect();
+	let cX = -(y - box.y - (box.height / 2)) / 20 * 1.15;
+	let cY = (x - box.x - (box.width / 2)) / 20 * 1.15;
+	
+	return "perspective(1000px) "
+    + "   rotateX("+ cX +"deg) "
+    + "   rotateY("+ cY +"deg) ";
+};
+
+function transformElement(el, xyEl) {
+	el.style.transform  = transforms.apply(null, xyEl);
+}
+
+movingArea.onmousemove = animateLogo;
+
+function animateLogo(e) {
+	let xy = [e.clientX, e.clientY];
+	let position = xy.concat([logo]);
+
+	window.requestAnimationFrame(function(){
+    	transformElement(logo, position);
+	});
+};
