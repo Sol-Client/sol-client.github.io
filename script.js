@@ -1,13 +1,12 @@
-var downloadButton = document.getElementById("download-button");
-
+const downloadButton = document.getElementById("download-button");
 
 // https://stackoverflow.com/a/38241481/7658797
 function getOSExtension() {
-	var userAgent = window.navigator.userAgent;
-	var platform = window.navigator.platform;
-	var macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
-	var windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-	var iosPlatforms = ["iPhone", "iPad", "iPod"];
+	const userAgent = window.navigator.userAgent;
+	const platform = window.navigator.platform;
+	const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
+	const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+	const iosPlatforms = ["iPhone", "iPad", "iPod"];
 
 	if(macosPlatforms.indexOf(platform) !== -1) {
 		return ".dmg";
@@ -56,34 +55,25 @@ else {
 	downloadButton.innerText = "Unsupported";
 }
 
-let movingArea = document.getElementById("header");
-let logo = document.getElementById("logo");
+if(window.matchMedia("(hover: hover)").matches) {
+	const logo = document.querySelector(".logobg");
+	const rotationMultiplier = 0.2;
 
-if (!os) {
-	logo.style.animation = "wheretfami 7s infinite";
-}
-
-function transforms(x, y, el) {
-	let box = el.getBoundingClientRect();
-	let cX = -(y - box.y - (box.height / 2)) / 20 * 1.15;
-	let cY = (x - box.x - (box.width / 2)) / 20 * 1.15;
+	logo.style.animation = "initial";
+	logo.style.transform = "initial";
 	
-	return "perspective(1000px) "
-    + "   rotateX("+ cX +"deg) "
-    + "   rotateY("+ cY +"deg) ";
-};
+	logo.addEventListener("mousemove", (event) => {
+		const bounds = logo.getBoundingClientRect();
+		const rotationX = -(event.clientY - bounds.y - bounds.height / 2) * rotationMultiplier;
+		const rotationY = (event.clientX - bounds.x - (bounds.width / 2)) * rotationMultiplier;
+		window.requestAnimationFrame(() => {
+			logo.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+			logo.style.transition = "transform 0.1s";
+		});
+	});
 
-function transformElement(el, xyEl) {
-	el.style.transform  = transforms.apply(null, xyEl);
-}
-
-movingArea.onmousemove = animateLogo;
-
-function animateLogo(e) {
-	let xy = [e.clientX, e.clientY];
-	let position = xy.concat([logo]);
-
-	window.requestAnimationFrame(function(){
-    	transformElement(logo, position);
+	logo.addEventListener("mouseleave", (event) => {
+		logo.style.transform = "initial";
+		logo.style.transition = "transform 0.4s";
 	});
 };
