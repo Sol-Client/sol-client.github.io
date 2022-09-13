@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
     background-color: rgb(14, 8, 0);
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
 }
+
 h1 {
     font-size: 450%;
 }
+
 h2 {
     font-size: 350%;
 }
+
 @keyframes wheretfami {
     from {
         transform: rotateX(10deg) rotateY(15deg);
@@ -31,8 +35,9 @@ h2 {
         transform: rotateX(10deg) rotateY(15deg);
     }
 }
+
 .logobg {
-    /* animation: wheretfami 7s infinite; */
+    animation: wheretfami 7s infinite;
     margin: 0 auto;
     width: 250px;
     height: 250px;
@@ -53,6 +58,7 @@ h2 {
     transform: rotateX(15deg) rotateY(10deg);
     transform: translate3d(0, 0, -75px);
 }
+
 .logobg::after {
     content: url(https://sol-client.github.io/logo.png);
     position: absolute;
@@ -64,6 +70,7 @@ h2 {
     transform: rotateX(0deg) rotateY(0deg);
     transform: translate3d(0, 0, 35px);
 }
+
 .linear-wipe {
     text-align: center;
     background: linear-gradient(90deg, #996515 10%, #ffd700 45%, #ffd700 50%, #996515 90%);
@@ -74,31 +81,38 @@ h2 {
     -webkit-text-fill-color: transparent;
     animation: grad 5s linear infinite;
 }
+
 @keyframes grad {
     to {
         background-position: 200% center;
     }
 }
+
 ::-webkit-scrollbar-track {
     background: nones;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgb(200, 200, 200);
 }
+
 .features {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 @media (max-width: 800px) {
     .features {
         flex-direction: column;
     }
 }
+
 a {
     text-decoration: none;
     color: white;
