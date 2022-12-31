@@ -1,4 +1,4 @@
-# Version 1.8.8
+# Version 1.8.8 Released
 Just some tiny updates to dependencies.
 
 # Version 1.8.7 Released
