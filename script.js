@@ -1,4 +1,4 @@
-const credit = ["FelixFromDiscord", "TheKodeToad", "eyezahhhh"];
+const credit = ["FelixFromDiscord", "TheKodeToad", "eyezah"];
 const creditTypes = [
 	"Site created by {}.",
 	"Made with the blood and tears of {}.",
