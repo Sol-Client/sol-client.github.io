@@ -15,36 +15,18 @@ h2 {
     font-size: 350%;
 }
 
-@keyframes wherethami {
-    from {
-        transform: rotateX(10deg) rotateY(15deg);
-    }
-    15% {
-        transform: rotateX(20deg) rotateY(10deg);
-    }
-    35% {
-        transform: rotateX(-10deg) rotateY(-5deg);
-    }
-    45% {
-        transform: rotateX(-20deg) rotateY(10deg);
-    }
-    55% {
-        transform: rotateX(10deg) rotateY(-5deg);
-    }
-    to {
-        transform: rotateX(10deg) rotateY(15deg);
-    }
-}
-
 .logobg {
-    animation: wherethami 7s infinite;
     margin: 0 auto;
     width: 250px;
     height: 250px;
     transform-style: preserve-3d;
     transform: rotateX(15deg) rotateY(20deg);
-    background-color: #ffaa11;
-    transition:  transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: transparent;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s;
+}
+
+.logobg:hover {
+    background-color: #2e2e2e;
 }
 
 .logobg::before {
