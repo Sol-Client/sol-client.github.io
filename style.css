@@ -1,137 +1,105 @@
-:root {
-	--accent-colour: rgb(255, 180, 0);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-	background-color: rgb(30, 30, 30);
-	color: white;
-	margin: 0;
-	margin-top: 50px;
+    background-color: rgb(14, 8, 0);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
 }
 
-.title, .subtitle, .subheading {
-	font-family: Raleway;
-	font-weight: normal;
+h1 {
+    font-size: 450%;
 }
 
-p {
-	font-family: Roboto;
+h2 {
+    font-size: 350%;
 }
 
-.title {
-	font-size: 5em;
+.logobg {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(20deg);
+    background-color: transparent;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s;
 }
 
-.subheading {
-	font-size: 2.5em;
+.logobg:hover {
+    background-color: #2e2e2e;
 }
 
-.title, .subtitle, .logo, .centred, .subheading {
-	margin-left: auto;
-	margin-right: auto;
-	display: table;
+.logobg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transform: rotateX(15deg) rotateY(10deg);
+    transform: translate3d(0, 0, -75px);
 }
 
-.button {
-	color: white;
-	text-decoration: none;
-	font-family: Roboto;
-	padding: 30px;
-	font-size: 2em;
-	padding-left: 40px;
-	padding-right: 40px;
-	transition: background 0.3s, box-shadow 0.3s;
-	border-radius: 5px;
+.logobg::after {
+    content: url(https://sol-client.github.io/logo.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform: translate3d(0, 0, 35px);
 }
 
-.button.green {
-	background: rgb(0, 100, 0);
-	box-shadow: 0 0 20px rgb(0, 100, 0);
-	width: 185px;
-	text-align: center;
+.linear-wipe {
+    text-align: center;
+    background: linear-gradient(90deg, #996515 10%, #ffd700 45%, #ffd700 50%, #996515 90%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: grad 5s linear infinite;
 }
 
-.button.green:hover {
-	background: rgb(20, 120, 20);
+@keyframes grad {
+    to {
+        background-position: 200% center;
+    }
 }
 
-.button.discord, .button.github {
-	padding: 20px;
-	font-size: 1.5em;
-	display: inline-block;
+::-webkit-scrollbar-track {
+    background: nones;
 }
 
-.button.discord {
-	background: rgb(88, 101, 242);
-	box-shadow: 0 0 20px rgb(88, 101, 242);
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.button.discord:hover {
-	background: rgb(118, 131, 272);
+::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
 }
 
-.button.github {
-	background: rgb(70, 70, 70);
-	box-shadow: 0 0 20px rgb(90, 90, 90);
-	margin-right: 40px;
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.button.github:hover {
-	background: rgb(90, 90, 90);
+@media (max-width: 800px) {
+    .features {
+        flex-direction: column;
+    }
 }
 
-.centred-text, .feature-description {
-	width: 100%;
-	text-align: center;
-}
-
-.feature {
-	display: inline-block;
-}
-
-.feature:not(:last-child) {
-	margin-right: 40px;
-}
-
-.feature-description {
-	font-family: Roboto;
-	margin-top: -20px;
-}
-
-.mod {
-	border: solid 3px var(--accent-colour);
-	width: 894px;
-	height: 84px;
-	position: relative;
-	left: calc(50% - 450px);
-	font-family: Roboto;
-	font-size: 24px;
-	background-color: rgba(0, 0, 0, 150);
-	margin-bottom: 15px;
-	cursor: default;
-}
-
-.mod:hover {
-	border-color: rgb(255, 240, 60);
-}
-
-.mod-title {
-	position: absolute;
-	left: 15px;
-	top: 9px;
-}
-
-.mod-description {
-	position: absolute;
-	left: 15px;
-	top: 45px;
-	color: rgb(128, 128, 128);
-}
-
-.mod-category {
-	font-size: 24px;
-	font-family: Roboto;
-	text-align: center;
-	margin-bottom: 16px;
-	cursor: default;
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 22.5px;
+    border-radius: 5px;
+    margin: 25px;
 }
