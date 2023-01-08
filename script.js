@@ -1,4 +1,4 @@
-const credit = ["TheKodeToad", "FelixFromDiscord", "eyezahhhh"];
+const credit = ["FelixFromDiscord", "", "eyezahhhh"];
 const creditTypes = [
 	"Site created by {}.",
 	"Made with the blood and tears of {}.",
@@ -17,18 +17,14 @@ function getOSExtension() {
 	const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
 	const iosPlatforms = ["iPhone", "iPad", "iPod"];
 
-	if (macosPlatforms.indexOf(platform) !== -1) {
+	if (macosPlatforms.indexOf(platform) !== -1)
 		return ".dmg";
-	}
-	else if (windowsPlatforms.indexOf(platform) !== -1) {
+	else if (windowsPlatforms.indexOf(platform) !== -1)
 		return ".exe";
-	}
-	else if (iosPlatforms.indexOf(platform) !== -1) {
+	else if (iosPlatforms.indexOf(platform) !== -1)
 		return null;
-	}
-	else if (/Android/.test(userAgent)) {
+	else if (/Android/.test(userAgent))
 		return null;
-	}
 	else if (/Linux/.test(platform)) {
 		if (/Ubuntu/.test(userAgent) || /Debian/.test(userAgent)) {
 			return ".deb";
@@ -59,10 +55,8 @@ if (os) {
 	});
 	request.open("GET", "https://api.github.com/repos/TheKodeToad/Sol-Client/releases/latest");
 	request.send();
-}
-else {
+} else
 	downloadButton.innerText = "Unsupported";
-}
 
 if (window.matchMedia("(hover: hover)").matches) {
 	const logo = document.querySelector(".logobg");
@@ -92,8 +86,7 @@ for (let i = 0; i < credit.length; i++) {
 	authors += credit[i];
 	if (i == credit.length - 2) {
 		authors += " and ";
-	}
-	else if (i != credit.length - 1) {
+	} else if (i != credit.length - 1) {
 		authors += ", ";
 	}
 }
