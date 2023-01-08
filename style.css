@@ -15,7 +15,7 @@ h2 {
     font-size: 350%;
 }
 
-@keyframes wheretfami {
+@keyframes wherethami {
     from {
         transform: rotateX(10deg) rotateY(15deg);
     }
@@ -37,7 +37,7 @@ h2 {
 }
 
 .logobg {
-    animation: wheretfami 7s infinite;
+    animation: wherethami 7s infinite;
     margin: 0 auto;
     width: 250px;
     height: 250px;
