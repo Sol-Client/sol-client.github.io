@@ -10,6 +10,7 @@ body {
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 header {
@@ -19,7 +20,7 @@ header {
     background-repeat: no-repeat;
     background-size: 30%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: top;
 }
 
 small {
@@ -42,8 +43,7 @@ small {
 }
 
 .title {
-    z-index: 0;
-    padding-top: 18%;
+    padding-top: 15%;
     display: block;
     font-weight: bolder;
     font-size: 32px;
@@ -55,7 +55,7 @@ small {
     display: block;
     font-weight: bold;
     font-size: 24px;
-    margin-top: 5%;
+    margin-top: 12%;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -74,34 +74,24 @@ small {
     border: black 1px solid;
 }
 
-.navbar {
-    background-color: #333333;
-    width: 100%;
-	text-align: right;
+.github,
+.github:visited {
+    color: #000;
+    margin: 8px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 6px;
+    width: 72px;
 }
 
-.navbar i {
-    transition: .3s ease-in-out;
-    padding: 4px;
-    font-size: 24px;
-}
-
-
-.navbar .discord { color: #7289da; }
-
-.navbar .github { color: #000; }
-
-.navbar .discord:hover {
-    color: white;
-}
-
-.navbar .github:hover {
-    color: white;
-}
-
-
-.navbar i {
-    font-size: 52px;
+.discord,
+.discord:visited {
+    color: #5865F2;
+    margin: 8px;
+    padding: 8px;
+    background-color: #000;
+    border-radius: 6px;
+    width: 72px;
 }
 
 .feature img {
