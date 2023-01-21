@@ -17,7 +17,7 @@ header {
     text-align: center;
     background-image: url(logo.png);
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 30%;
     background-position-x: center;
     background-position-y: center;
 }
@@ -114,15 +114,14 @@ small {
     background-color: #232323;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     padding: 15px;
 }
 
 .feature {
-    height: 250px;
-    width: 300px;
+    height: 255px;
+    width: 275px;
     text-align: center;
     background-color: #323232;
     padding: 12px;
