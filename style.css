@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     height: 650px;
     text-align: center;
@@ -16,6 +20,19 @@ header {
     background-size: 45%;
     background-position-x: center;
     background-position-y: center;
+}
+
+small {
+    background-color: #333a;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 6px;
+    text-align: center; 
+    width: 100%;   
+    font-size: 18px;
+    color: #ffffff;
+    word-wrap: normal;
 }
 
 @media (max-width: 490px) {
@@ -57,14 +74,6 @@ header {
     border: black 1px solid;
 }
 
-a {
-    text-decoration: none;
-}
-
-.features {
-    background-color: #232323;
-}
-
 .navbar {
     background-color: #333333;
     width: 100%;
@@ -95,19 +104,6 @@ a {
     font-size: 52px;
 }
 
-small {
-    background-color: #333a;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    padding: 6px;
-    text-align: center; 
-    width: 100%;   
-    font-size: 18px;
-    color: #ffffff;
-    word-wrap: normal;
-}
-
 .feature img {
     margin-left: auto;
     margin-right: auto;
@@ -115,6 +111,7 @@ small {
 }
 
 .features {
+    background-color: #232323;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
