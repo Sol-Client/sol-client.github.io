@@ -1,105 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    background-color: rgb(14, 8, 0);
+    background-color: #232323;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 650px;
     text-align: center;
 }
 
-h1 {
-    font-size: 450%;
+@media (max-width: 490px) {
+    body {
+        background-image: none;
+    }
 }
 
-h2 {
-    font-size: 350%;
+.title {
+    padding-top: 18%;
+    display: block;
+    font-weight: bolder;
+    font-size: 32px;
+    color: orange;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.logobg {
+.description {
+    display: block;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5%;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#download-button {
+    width: 128px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(86, 255, 86);
+    padding: 8px;
+    display: block;
     margin: 0 auto;
-    width: 250px;
-    height: 250px;
-    transform-style: preserve-3d;
-    transform: rotateX(15deg) rotateY(20deg);
-    background-color: transparent;
-    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s;
-}
-
-.logobg:hover {
-    background-color: #2e2e2e;
-}
-
-.logobg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    transform: rotateX(15deg) rotateY(10deg);
-    transform: translate3d(0, 0, -75px);
-}
-
-.logobg::after {
-    content: url(https://sol-client.github.io/logo.png);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0000;
-    transform: rotateX(0deg) rotateY(0deg);
-    transform: translate3d(0, 0, 35px);
-}
-
-.linear-wipe {
-    text-align: center;
-    background: linear-gradient(90deg, #996515 10%, #ffd700 45%, #ffd700 50%, #996515 90%);
-    background-size: 200% auto;
-    color: #000;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: grad 5s linear infinite;
-}
-
-@keyframes grad {
-    to {
-        background-position: 200% center;
-    }
-}
-
-::-webkit-scrollbar-track {
-    background: nones;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(200, 200, 200);
-}
-
-.features {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-@media (max-width: 800px) {
-    .features {
-        flex-direction: column;
-    }
+    margin-top: 15px;
+    border: black 1px solid;
 }
 
 a {
     text-decoration: none;
+}
+
+.features {
+    background-color: #232323;
+}
+
+.navbar {
+    background-color: #333333;
+    width: 100%;
+	text-align: right;
+}
+
+.navbar i {
+    transition: .3s ease-in-out;
+    padding: 4px;
+    font-size: 24px;
+}
+
+
+.navbar .discord { color: #7289da; }
+
+.navbar .github { color: #000; }
+
+.navbar .discord:hover {
     color: white;
-    cursor: pointer;
-    padding: 22.5px;
-    border-radius: 5px;
-    margin: 25px;
+}
+
+.navbar .github:hover {
+    color: white;
+}
+
+
+.navbar i {
+    font-size: 52px;
+}
+
+small {
+    background-color: #333a;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 6px;
+    text-align: center; 
+    width: 100%;   
+    font-size: 18px;
+    color: #ffffff;
+    word-wrap: normal;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.features {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 15px;
+}
+
+.feature {
+    height: 250px;
+    width: 300px;
+    text-align: center;
+    background-color: #323232;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.feature-desc {
+    display: block;
+}
+
+.note {
+    margin-bottom: 50px;
+    text-align: center;
 }

@@ -30,47 +30,65 @@
     <title>Sol Client - Open Source Minecraft Client</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="style.css" rel="stylesheet"/>
     <script src="script.js" defer></script>
     <title>Sol Client - Open Source Minecraft Client</title>
 </head>
 <body>
-    <header id="header">
-        <div class="logobg" id="logo"></div>
-        <br>
-        <h1 class="linear-wipe">Sol Client</h1>
-        <h3>Yet another Minecraft Client</h3>
-        <br><br>
-        <a style="background-color: #212121; box-shadow: 0px 0px 2px #fff" href="https://github.com/Sol-Client/Client">GitHub</a>
-        <a style="background-color: #7289DA; box-shadow: 0px 0px 2px #9aaffd" href="https://discord.gg/TSAkhgXNbK">Discord</a>
-        <br><br><br><br>
-        <a style="background-color: #88fa88; box-shadow: 0px 0px 2px #c3ffc3; color: black;" id="download-button" href="https://github.com/Sol-Client/Client/releases">Download</a>
+    <nav class="navbar">
+        <a href="https://discord.gg/UuBU7wX349" class="discord"><i class='bx bxl-discord-alt'></i></a>
+        <a href="https://github.com/sol-client/client" class="github"><i class='bx bxl-github'></i></a>
+    </nav>
+
+    <header data-parallax="scroll" data-image-src="https://sol-client.github.io/favicons/thumbnail.jpg">
+        <span class="title">SolClient</span>
+        <span class="description">Yet another Minecraft Client</span>
+
+        <a id="download-button" href="https://github.com/Sol-Client/Client/releases">Download</a>
     </header>
-    <br><br>
-    <h2>Features</h2>
+
     <div class="features">
         <div class="feature">
-            <img src="https://github.com/FelixFromDiscord/sol-web-rewrite/raw/main/hud.svg" alt="HUD Icon" height="150px">
-            <p class="feature-desc">Customisable HUD</p>
+            <img src="https://github.com/sol-client/sol-client.github.io/raw/main/hud.svg" alt="HUD Icon" height="150px">
+            <span>Customisable HUD</span>
+            <span class="feature-desc">
+                Rearrange the HUD elements, change the size, position as you like!
+            </span>
         </div>
         <div class="feature">
-            <img src="https://github.com/FelixFromDiscord/sol-web-rewrite/raw/main/sword.svg" alt="Sword Icon" height="150px">
+            <img src="https://github.com/sol-client/sol-client.github.io/raw/main/sword.svg" alt="Sword Icon" height="150px">
             <p class="feature-desc">1.8 Support</p>
+            <span class="feature-desc">
+                Enjoy the (best) 1.8 Combat System!
+            </span>
         </div>
         <div class="feature">
-            <img src="https://github.com/FelixFromDiscord/sol-web-rewrite/raw/main/replay.svg" alt="Replay Icon" height="150px">
+            <img src="https://github.com/sol-client/sol-client.github.io/raw/main/replay.svg" alt="Replay Icon" height="150px">
             <p class="feature-desc">Replay Mod *</p>
+            <span class="feature-desc">
+                Capture the best moments of your games without any external software!
+            </span>
         </div>
         <div class="feature">
-            <img src="https://github.com/FelixFromDiscord/sol-web-rewrite/raw/main/servers.svg" alt="Sword Icon" height="150px">
+            <img src="https://github.com/sol-client/sol-client.github.io/raw/main/servers.svg" alt="Server Icon" height="150px">
             <p class="feature-desc">Server Integration</p>
+            <span class="feature-desc">
+                Quickly join your favorite servers right from the launcher!
+            </span>
         </div>
     </div>
-    <br>
-    <h4 class="note">
-        * Replay mod is modified from the Forge mod originally created by Johni and CrushedPixel.
-    </h4>
-    <br>
+    
+    <div class="note">
+        (* Replay mod is modified from the Forge mod originally created by Johni and CrushedPixel.)
+    </div>
+
     <small>Site created by FelixFromDiscord, TheKodeToad and eyezah.</small>
+    
+    <noscript>
+        You need JavaScript enabled to see this page!
+    </noscript>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="parallax.min.js" defer></script>
 </body>
 </html>

@@ -58,37 +58,15 @@ if (os) {
 } else
 	downloadButton.innerText = "Unsupported";
 
-if (window.matchMedia("(hover: hover)").matches) {
-	const logo = document.querySelector(".logobg");
-	const rotationMultiplier = 0.2;
-
-	logo.style.animation = "initial";
-	logo.style.transform = "initial";
-
-	logo.addEventListener("mousemove", (event) => {
-		const bounds = logo.getBoundingClientRect();
-		const rotationX = -(event.clientY - bounds.y - bounds.height / 2) * rotationMultiplier;
-		const rotationY = (event.clientX - bounds.x - (bounds.width / 2)) * rotationMultiplier;
-		window.requestAnimationFrame(() => {
-			logo.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-		});
-	});
-
-	logo.addEventListener("mouseleave", () => {
-		logo.style.transform = "initial";
-	});
-};
-
 const footer = document.querySelector("small");
 let authors = "";
-
 for (let i = 0; i < credit.length; i++) {
-	authors += credit[i];
+	authors += `<strong>${credit[i]}</strong>`;
 	if (i == credit.length - 2) {
 		authors += " and ";
 	} else if (i != credit.length - 1) {
 		authors += ", ";
 	}
 }
-
-footer.innerText = creditTypes[Math.floor(Math.random() * creditTypes.length)].replace("{}", authors);
+	
+footer.innerHTML = creditTypes[Math.floor(Math.random() * creditTypes.length)].replace("{}", authors);
