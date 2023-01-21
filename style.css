@@ -11,6 +11,11 @@ body {
 header {
     height: 650px;
     text-align: center;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 @media (max-width: 490px) {
@@ -20,6 +25,7 @@ header {
 }
 
 .title {
+    z-index: 0;
     padding-top: 18%;
     display: block;
     font-weight: bolder;
@@ -102,7 +108,7 @@ small {
     word-wrap: normal;
 }
 
-img {
+.feature img {
     margin-left: auto;
     margin-right: auto;
     display: block;
