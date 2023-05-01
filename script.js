@@ -26,7 +26,7 @@ request.addEventListener("load", function () {
 	if (!asset.browser_download_url)
 		return;
 
-	downloadButton.href = asset.browser_download_url ?? downloadButton.href;
+	downloadButton.href = asset.browser_download_url;
 });
 request.open("GET", "https://api.github.com/repos/Sol-Client/installer/releases");
 request.send();
