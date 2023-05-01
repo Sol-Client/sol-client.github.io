@@ -42,9 +42,11 @@ if (os) {
 		var response = JSON.parse(request.responseText);
 
 		// If the rate limit is exceeded, fall back to the less user friendly page
-		if (!response.assets) {
+		if (!response[0])
 			return;
-		}
+		response = response[0];
+		if (!response.assets)
+			return;
 
 		for (var asset of response.assets) {
 			if (asset.name.endsWith(os)) {
@@ -53,7 +55,7 @@ if (os) {
 			}
 		}
 	});
-	request.open("GET", "https://api.github.com/repos/TheKodeToad/Sol-Client/releases/latest");
+	request.open("GET", "https://api.github.com/repos/Sol-Client/installer/releases");
 	request.send();
 } else
 	downloadButton.innerText = "Unsupported";
