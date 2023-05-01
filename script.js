@@ -1,5 +1,5 @@
-const credit = ["FelixFromDiscord", "TheKodeToad", "eyezah"];
-const creditTypes = [
+var credit = ["FelixFromDiscord", "TheKodeToad", "eyezah"];
+var creditTypes = [
 	"Site created by {}.",
 	"Made with the blood and tears of {}.",
 	"Mostly stolen from stackoverflow by {}.",
@@ -7,70 +7,41 @@ const creditTypes = [
 	"Created using an expiring Adobe Dreamweaver license by {}.",
 	"Hosted by monkeys and programmed by {}."
 ];
-const downloadButton = document.getElementById("download-button");
+var downloadButton = document.getElementById("download-button");
 
-// https://stackoverflow.com/a/38241481/7658797
-function getOSExtension() {
-	const userAgent = window.navigator.userAgent;
-	const platform = window.navigator.platform;
-	const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "Darwin"];
-	const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-	const iosPlatforms = ["iPhone", "iPad", "iPod"];
+var request = new XMLHttpRequest();
+request.addEventListener("load", function () {
+	var response = JSON.parse(request.responseText);
 
-	if (macosPlatforms.indexOf(platform) !== -1)
-		return ".dmg";
-	else if (windowsPlatforms.indexOf(platform) !== -1)
-		return ".exe";
-	else if (iosPlatforms.indexOf(platform) !== -1)
-		return null;
-	else if (/Android/.test(userAgent))
-		return null;
-	else if (/Linux/.test(platform)) {
-		if (/Ubuntu/.test(userAgent) || /Debian/.test(userAgent)) {
-			return ".deb";
-		}
+	// If the rate limit is exceeded, fall back to the less user friendly page
+	if (!response[0])
+		return;
+	response = response[0];
+	if (!response.assets)
+		return;
+	
+	var asset = response.assets[0];
+	if (!asset)
+		return;
+	if (!asset.browser_download_url)
+		return;
 
-		return ".AppImage";
-	}
-}
-
-var os = getOSExtension();
-
-if (os) {
-	var request = new XMLHttpRequest();
-	request.addEventListener("load", () => {
-		var response = JSON.parse(request.responseText);
-
-		// If the rate limit is exceeded, fall back to the less user friendly page
-		if (!response[0])
-			return;
-		response = response[0];
-		if (!response.assets)
-			return;
-
-		for (var asset of response.assets) {
-			if (asset.name.endsWith(os)) {
-				downloadButton.href = asset.browser_download_url;
-				return;
-			}
-		}
-	});
-	request.open("GET", "https://api.github.com/repos/Sol-Client/installer/releases");
-	request.send();
-} else
-	downloadButton.innerText = "Unsupported";
+	downloadButton.href = asset.browser_download_url ?? downloadButton.href;
+});
+request.open("GET", "https://api.github.com/repos/Sol-Client/installer/releases");
+request.send();
 
 if (window.matchMedia("(hover: hover)").matches) {
-	const logo = document.querySelector(".logobg");
-	const rotationMultiplier = 0.2;
+	var logo = document.querySelector(".logobg");
+	var rotationMultiplier = 0.2;
 
 	logo.style.animation = "initial";
 	logo.style.transform = "initial";
 
 	logo.addEventListener("mousemove", (event) => {
-		const bounds = logo.getBoundingClientRect();
-		const rotationX = -(event.clientY - bounds.y - bounds.height / 2) * rotationMultiplier;
-		const rotationY = (event.clientX - bounds.x - (bounds.width / 2)) * rotationMultiplier;
+		var bounds = logo.getBoundingClientRect();
+		var rotationX = -(event.clientY - bounds.y - bounds.height / 2) * rotationMultiplier;
+		var rotationY = (event.clientX - bounds.x - (bounds.width / 2)) * rotationMultiplier;
 		window.requestAnimationFrame(() => {
 			logo.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
 		});
@@ -81,10 +52,10 @@ if (window.matchMedia("(hover: hover)").matches) {
 	});
 };
 
-const footer = document.querySelector("small");
-let authors = "";
+var footer = document.querySelector("small");
+var authors = "";
 
-for (let i = 0; i < credit.length; i++) {
+for (var i = 0; i < credit.length; i++) {
 	authors += credit[i];
 	if (i == credit.length - 2) {
 		authors += " and ";
