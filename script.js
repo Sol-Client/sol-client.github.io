@@ -3,7 +3,7 @@ var creditTypes = [
 	"Site created by {}.",
 	"Made with the blood and tears of {}.",
 	"Mostly stolen from stackoverflow by {}.",
-	"Created using Wnidows 7 proffesionnall by {}.",
+	"Created using Windows 7 professional by {}.",
 	"Created using an expiring Adobe Dreamweaver license by {}.",
 	"Hosted by monkeys and programmed by {}."
 ];
